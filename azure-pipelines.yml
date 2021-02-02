@@ -10,7 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: SynopsysPolaris@1
+- task: Maven@3
   inputs:
-    polarisService: 'POLARIS-ADO'
-    polarisCommand: 'analyze -w --coverity-ignore-capture-failure '
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
