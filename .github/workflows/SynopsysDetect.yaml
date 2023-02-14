@@ -1,5 +1,5 @@
 
-name: Synopsys AST
+name: Synopsys AST/SCA
 
 # Controls when the workflow will run
 on:
