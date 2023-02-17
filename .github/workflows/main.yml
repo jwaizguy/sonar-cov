@@ -47,7 +47,7 @@ jobs:
           blackduck_automation_fixpr: true
           blackduck_scan_full: true
         env:
-          MACOSX_BRIDGE_URL: "https://artifactory.internal.synopsys.com:443/artifactory/clops-local/clops.sig.synopsys.com/synopsys-action/0.1.158/ci-package-0.1.158-linux.zip"
+          MACOSX_BRIDGE_URL: "https://artifactory.internal.synopsys.com:443/artifactory/clops-local/clops.sig.synopsys.com/synopsys-action/0.1.192/ci-package-0.1.192-linux.zip"
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Synopsys AST (Incremental)
